@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="docdash.css">
+    <link rel="stylesheet" href="patientdash.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,13 +34,17 @@
 
     <!-- <img src="../images/doctor (2) 1.png" id="doctor" height="450" width="450"> -->
     <div class="main">
-        
+        <p id="hello">Hello, user</p>
+        <p id="id">Your User ID is: US123</p>
 
-        <div class="row">
+        <div id="upper" class="row">
+            <a href=""><button class="btn" id="doctors"><img src="../icons/doctor 1.svg" width="40" height="40"><p>Doctors</p></button></a>
             <a href=""><button class="btn" id="appointment"><img src="../icons/stethoscope 2.svg" width="40" height="40"><p>Appointments</p></button></a>
-            <a href=""><button class="btn" id="prescription"><img src="../icons/copy-writing 2.svg" width="40" height="40"><p>Prescriptions</p></button></a>
         </div>
-
+        <div id="lower" class="row">
+            <a href=""><button class="btn" id="reports"><img src="../icons/report 1.svg" width="40" height="40"><p>Reports</p></button></a>
+            <a href=""><button class="btn" id="bills"><img src="../icons/bill 1.svg" width="40" height="40"><p>Bills</p></button></a>
+        </div>
     </div>
 </body>
 
