@@ -83,7 +83,9 @@ img {
 }
 
 
-
+.row{
+  margin: 100px;
+}
 
 .btn {
   color: #000;
@@ -110,6 +112,3 @@ img {
   
 }
 
-#appointment{
-    margin-top: 100px;
-}
