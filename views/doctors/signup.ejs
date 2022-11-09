@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <img class="logo" src="../images/Lotus Hospital.svg" alt="logo" height="100" width="100">
+        <img class="logo" src="/docimages/LotusHospital.svg" alt="logo" height="100" width="100">
         <nav>
             <ul class="nav_links">
                 <li><a href="#">Home</a></li>
@@ -26,36 +26,36 @@
     </header>
 
     <div class="main">
-        <img class="doctor" src="../images/doctor man_Mesa de trabajo 1 1.png" alt="doctor" height="600" width="500">
+        <img class="doctor" src="/docimages/doctor.png" alt="doctor" height="600" width="500">
         <div class="signup-wrap">
             <div class="signup">
                 <h3 id="account">Create an Account</h3>
                 <h3 id="type">(Doctor)</h3>
-                <form action="/doctor/register">
+                <form action="/doctor/register" method="post">
                     <div class="line-wrap">
                         <input class="short-input" id="firstname" type="text" placeholder="First Name" name="fname">
                         <input class="short-input" id="lastname" type="text" placeholder="Last Name" name="lname">
                     </div>
                     <div class="line-wrap">
                         <input class="short-input" type="tel" id="tel" placeholder="Contact No." name="contact">
-                        <input class="short-input" id="email" type="email" placeholder="Email">
+                        <input class="short-input" id="email" type="email" placeholder="Email" name="username">
                     </div>
                     <div class="line-wrap">
                         <input class="long-input" id="id" type="number" placeholder="Doctor ID issued by Hospital" name="doctorid">
                     </div>
 
                     <div class="line-wrap">
-                        <input class="short-input" id="password" type="password" placeholder="Password">
-                        <input class="short-input" id="confirmpassword" type="password" placeholder="Confirm Password">
+                        <input class="short-input" id="password" type="password" placeholder="Password" name="password">
+                        <input class="short-input" id="confirmpassword" type="password" placeholder="Confirm Password" name="cpassword">
                     </div>
-                    <input type="submit" value="Create Account" id="submitbutton" onclick="confirm()">
+                    <input type="submit" value="Create Account" id="submitbutton">
                     <p>Already have an account? <a href="/doctor/login"><span>Log in</span></a></p>
                 </form>
             </div>
         </div>
     </div>
 
-    <script src="app1.js"></script>
+    <script src="/app2.js"></script>
 </body>
 
 </html>

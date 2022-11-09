@@ -17,6 +17,7 @@ router.get("/", function(req, res) {
             //res.json(foundDoc);
 
             Appointment.find({did: foundDoc.doctorid}, function(err, apmnts) {
+                
                 res.render("doctors/schedule", {appointments: apmnts, doctor: foundDoc});
                 //res.json(apmnts);
             });

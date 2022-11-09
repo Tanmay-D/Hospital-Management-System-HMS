@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="schedule.css">
+    <link rel="stylesheet" href="/stylesheets/schedule.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
 
 <body>
     <header>
-        <img class="logo" src="../images/Lotus Hospital.svg" alt="logo" height="100" width="100">
+        <img class="logo" src="/docimages/LotusHospital.svg" alt="logo" height="100" width="100">
         <nav>
             <ul class="nav_links">
                 <li><a href="#">Home</a></li>
@@ -43,16 +43,16 @@
                 <th>Status</th>
                 <th></th>
             </tr>
-
+            <% appointments.forEach(function(appointment){ %>
             <tr>
-                <td>1</td>
+                <td><%=appointment.</td>
                 <td>Preksha De</td>
                 <td>2PM-3PM</td>
                 <td>Approved</td>
-                <td><a href="#"><button class="btn" id="cancel">Cancel</button></a></td>
+                <td><a href="/doctor/appointments/<%=appointment._id%>?_method=DELETE" method = "POST"><button class="btn" id="cancel">Cancel</button></a></td>
             </tr>
-
-            <tr>
+            <%});%>
+            <!-- <tr>
                 <td>2</td>
                 <td>Surya G</td>
                 <td>6PM-7PM</td>
@@ -66,7 +66,7 @@
                 <td>8AM-9AM</td>
                 <td>Cancelled</td>
                 <td>-</td>
-            </tr>
+            </tr> -->
 
         </table>
     </div>
