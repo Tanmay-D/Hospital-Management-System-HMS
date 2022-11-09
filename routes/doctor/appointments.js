@@ -6,10 +6,6 @@ var express     = require("express"),
     Appointment = require("../../models/appointment");
 
 
-// ROUTES
-
-
-
 // 2. "/appointments" => doctor appointment schedule
 router.get("/", function(req, res) {
     Doctor.findById(req.user._id, function(err, foundDoc) {
@@ -17,12 +13,12 @@ router.get("/", function(req, res) {
             console.log(err);
         }
         else {
-            // res.render("doctors/schedule", {doc: foundDoc});
-            res.json(foundDoc);
+            //res.render("doctors/schedule", {doc: foundDoc});
+            //res.json(foundDoc);
 
-            Appointment.find({doctor: foundDoc.name}, function(err, apmnts) {
-                //res.render("", {appointments: apmnts});
-                res.json(apmnts);
+            Appointment.find({did: foundDoc.doctorid}, function(err, apmnts) {
+                res.render("doctors/schedule", {appointments: apmnts, doctor: foundDoc});
+                //res.json(apmnts);
             });
 
         }

@@ -8,7 +8,6 @@ var doctorSchema = new mongoose.Schema({
     username: String,
     doctorid: String,
     password: String,
-    name: String,
     appointments : [
         {
             type: mongoose.Schema.Types.ObjectId,

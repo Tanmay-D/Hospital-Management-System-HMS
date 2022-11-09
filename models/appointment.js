@@ -3,7 +3,7 @@ var mongoose = require("mongoose");
 var appointmentSchema = new mongoose.Schema({
     sno: Number,
     patient: String,
-    Doctor: String,
+    did: String,
     slot: String,
     status: String,
 });

@@ -5,8 +5,8 @@ var express  = require("express"),
 
 
 router.get("/", function(req, res) {
-    //res.render("doctors/docdash");
-    res.json({"msg" : "welcome!"})
+    res.render("doctors/docdash");
+    //res.json({"msg" : "welcome!"})
 });
     
 
@@ -14,7 +14,7 @@ router.get("/", function(req, res) {
 // SIGN-UP FORM
 router.get("/register", function(req, res) {
     res.render("doctors/signup");
-    console.log("signup page.");
+    //console.log("signup page.");
     
 });
 
@@ -24,11 +24,11 @@ router.post("/register", function(req, res) {
 
     var newDoctor = new Doctor({
         username: req.body.username,
-        name: req.body.name
-        // fname:  req.body.fname,
-        // lname:  req.body.lname,
-        // contact:  req.body.contact,
-        // doctorid:  req.body.doctorid,
+        //name: req.body.name
+        fname:  req.body.fname,
+        lname:  req.body.lname,
+        contact:  req.body.contact,
+        doctorid:  req.body.doctorid,
     });
 
     Doctor.register(newDoctor, req.body.password, function(err, doc) {

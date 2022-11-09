@@ -6,16 +6,17 @@ var express  = require("express"),
 
 
 router.get("/", function(req, res) {
-    //res.render("patients/patientdash");
-    res.json({"msg" : "welcome!"})
+    res.render("patients/patientdash");
+    //res.json({"msg" : "welcome!"})
     console.log(req.user);
 });
     
 
 // SHOW ALL DOCTORS
 router.get("/doctors", function(req, res) {
-    //res.render()
-    res.json(Doctor.find({}));
+    Doctor.find({}, function(err, docs){
+        res.render("patients/doctorlist", {doctors: docs});
+    });
 });
 
 
@@ -32,11 +33,11 @@ router.post("/register", function(req, res) {
 
     var newPatient = new Patient({
         username: req.body.username,
-        name: req.body.name
-        // fname:  req.body.fname,
-        // lname:  req.body.lname,
-        // contact:  req.body.contact,
-        // contactF:  req.body.contactF,
+        //name: req.body.name,
+        fname:  req.body.fname,
+        lname:  req.body.lname,
+        contact:  req.body.contact,
+        contactF:  req.body.contactF,
         // patientid:  req.body.patientid,
     });
 

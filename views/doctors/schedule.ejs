@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="schedule.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>Appointments</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="../images/Lotus Hospital.svg" alt="logo" height="100" width="100">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#"><i class="fa fa-sign-out"></i></a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- <img src="../images/doctor (2) 1.png" id="doctor" height="450" width="450"> -->
+    <div class="main">
+        <h1>Appointments</h1>
+        <table id="port">
+            <tr>
+                <th>Sr. No.</th>
+                <th>Patient Name</th>
+                <th>Time-Slot</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Preksha De</td>
+                <td>2PM-3PM</td>
+                <td>Approved</td>
+                <td><a href="#"><button class="btn" id="cancel">Cancel</button></a></td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Surya G</td>
+                <td>6PM-7PM</td>
+                <td>Pending</td>
+                <td><a href="#"><button class="btn" id="approve">Approve</button></a></td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Priya M</td>
+                <td>8AM-9AM</td>
+                <td>Cancelled</td>
+                <td>-</td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+
+</html>

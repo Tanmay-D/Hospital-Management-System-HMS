@@ -6,7 +6,6 @@ var patientSchema = new mongoose.Schema({
     lname: String,
     contact: String,
     contactF: String,
-    name: String,
     username: String,
     password: String,
     appointments : [
