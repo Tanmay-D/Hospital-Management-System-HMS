@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="doctorsignup.css">
+    <link rel="stylesheet" href="signup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <title>Document</title>
+    <title>Signup Doctor</title>
 </head>
 
 <body>
@@ -49,12 +49,14 @@
                         <input class="short-input" id="password" type="password" placeholder="Password">
                         <input class="short-input" id="confirmpassword" type="password" placeholder="Confirm Password">
                     </div>
-                    <input type="submit" value="Create Account" id="submitbutton">
+                    <input type="submit" value="Create Account" id="submitbutton" onclick="confirm()">
                     <p>Already have an account? <a href="login.html"><span>Log in</span></a></p>
                 </form>
             </div>
         </div>
     </div>
+
+    <script src="app.js"></script>
 </body>
 
 </html>

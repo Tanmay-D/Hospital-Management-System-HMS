@@ -64,52 +64,78 @@ button {
   align-items: center;
   justify-content: flex-start;
 
-  background: url("../images/doctor\ \(2\)\ 1.png"), url("../images/medical-report\ 1.png");
+  background: url("../icons/stethoscope\ 2.svg"),
+    url("../images/medical-report\ 1.png");
   background-attachment: fixed, fixed;
   background-repeat: no-repeat, no-repeat;
   background-size: 500px 500px, 200px 200px;
   background-position: 70px 70px, bottom right;
-  
-
+  -webkit-backdrop-filter: opacity(30%);
+  backdrop-filter: url("../icons/stethoscope\ 2.svg");
 
   height: 91vh;
   width: 100vw;
-
- 
 }
 
 img {
   display: inline;
 }
 
+#port {
+  font-size: 20px;
+  border-collapse: collapse;
+}
 
+#port th {
+  font-weight: 900;
+}
 
+#port th,
+#port td {
+  padding: 10px 30px;
+  text-align: center;
+  margin: 0px;
+  height: 50px;
+}
+
+#port tr:nth-child(even) {
+  background-color: #D9D9D9;
+}
+
+#port tr:nth-child(odd) {
+  background-color: #BFBCBC;
+}
 
 .btn {
   color: #000;
-  font-weight: 700;
   font-family: Karla;
   font-size: 20px;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  margin: 30px;
+  padding: 10px;
 
-  
   opacity: 1;
   background: #dce4f0;
-  border-radius: 15px;
+  border-radius: 10px;
   cursor: pointer;
-  
+}
+
+#approve{
+    background-color: #52CEA0;
+    border: none;
+}
+
+#cancel{
+    background-color: #CE5252;
+    border: none;
 }
 
 .btn img {
   margin-right: 5px;
-  
 }
 
-#appointment{
-    margin-top: 100px;
+#appointment {
+  margin-top: 100px;
 }

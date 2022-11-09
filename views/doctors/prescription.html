@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="docdash.css">
+    <link rel="stylesheet" href="prescription.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-    <title>Dashboard</title>
+    <title>Prescription</title>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact Us</a></li>
-                <li><a href="#"><i class="fa fa-sign-out"></i></a></li> 
+                <li><a href="#"><i class="fa fa-sign-out"></i></a></li>
             </ul>
         </nav>
 
@@ -34,10 +34,38 @@
 
     <!-- <img src="../images/doctor (2) 1.png" id="doctor" height="450" width="450"> -->
     <div class="main">
-        
-        <a href=""><button class="btn" id="appointment"><img src="../icons/stethoscope 2.svg" width="40" height="40"><p>Appointments</p></button></a>
-        <a href=""><button class="btn" id="prescription"><img src="../icons/copy-writing 2.svg" width="40" height="40"><p>Prescriptions</p></button></a>
+        <h1>Appointments</h1>
+        <table id="port">
+            <tr>
+                <th>Sr. No.</th>
+                <th>Patient Name</th>
+                <th>Time-Slot</th>
+                <th>Status</th>
+                
+            </tr>
 
+            <tr>
+                <td>1</td>
+                <td>Preksha De</td>
+                <td>2PM-3PM</td>
+                <td>Uploaded</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Surya G</td>
+                <td>6PM-7PM</td>
+                <td><a href="#"><button class="btn" id="approve">Upload</button></a></td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Priya M</td>
+                <td>8AM-9AM</td>
+                <td><a href="#"><button class="btn" id="approve">Upload</button></a></td>
+            </tr>
+
+        </table>
     </div>
 </body>
 
