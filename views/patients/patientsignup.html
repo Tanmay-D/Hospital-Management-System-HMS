@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="doctorsignup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="../images/Lotus Hospital.svg" alt="logo" height="100" width="100">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="main">
+        <img class="doctor" src="../images/doctor man_Mesa de trabajo 1 1.png" alt="doctor" height="600" width="500">
+        <div class="signup-wrap">
+            <div class="signup">
+                <h3 id="account">Create an Account</h3>
+                <h3 id="type">(Patient)</h3>
+                <form action="#">
+                    <div class="line-wrap">
+                        <input class="short-input" name="fname" id="firstname" type="text" placeholder=" First Name">
+                        <input class="short-input" name="lname" id="lastname" type="text" placeholder=" Last Name">
+                    </div>
+                    <div class="line-wrap">
+                        <input class="short-input" name="mobile" type="tel" id="tel" placeholder=" Contact No.">
+                        <input class="short-input" name="mobile1" id="tel1" type="tel" placeholder=" Contact No.(family)">
+                    </div>
+                    <div class="line-wrap">
+                        <input class="long-input" name="username" id="email" type="email" placeholder=" Email">
+                    </div>
+
+                    <div class="line-wrap">
+                        <input class="short-input" name="passowrd" id="password" type="password" placeholder=" Password">
+                        <input class="short-input" name="cpassword" id="confirmpassword" type="password" placeholder=" Confirm Password">
+                    </div>
+                    <input type="submit" value="Create Account" id="submitbutton">
+                    <p>Already have an account? <a href="login.html"><span>Log in</span></a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
