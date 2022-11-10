@@ -20,6 +20,7 @@ var patientIndexRoutes            =  require("./routes/patient/index"),
 var Patient = require("./models/patient"),
     Doctor  = require("./models/doctor"),
     Receptionist = require("./models/receptionist");
+    Nurse = require("./models/nurse");
 
 var app = express();
 
@@ -48,6 +49,7 @@ app.use(passport.session());
 
 passport.use("doctorLocal", new localStrategy(Doctor.authenticate()));
 passport.use("patientLocal", new localStrategy(Patient.authenticate()));
+passport.use("nurseLocal", new localStrategy(Nurse.authenticate()));
 passport.use("receptionistLocal", new localStrategy(Receptionist.authenticate()));
 
 passport.serializeUser(function(user, done) { 
@@ -72,7 +74,7 @@ app.use("/patient", patientIndexRoutes);
 app.use("/patient/appointments", patientAppointmentRoutes);
 app.use("/doctor/appointments", doctorAppointmentRoutes);
 app.use("/doctor", doctorIndexRoutes);
-// app.use("/nurse", nurseIndexRoutes);
+app.use("/nurse", nurseIndexRoutes);
 app.use("/receptionist", receptionistIndexRoutes);
 app.use("/receptionist/appointments", receptionistAppoinmentRoutes);
 

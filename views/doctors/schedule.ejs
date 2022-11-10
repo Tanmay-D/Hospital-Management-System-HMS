@@ -37,19 +37,18 @@
         <h1>Appointments</h1>
         <table id="port">
             <tr>
-                <th>Sr. No.</th>
                 <th>Patient Name</th>
                 <th>Time-Slot</th>
                 <th>Status</th>
                 <th></th>
             </tr>
-            <% appointments.forEach(function(appointment){ %>
+            <% appointments.forEach(function(appointment, i){ %>
             <tr>
-                <td><%=appointment.</td>
-                <td>Preksha De</td>
-                <td>2PM-3PM</td>
-                <td>Approved</td>
-                <td><a href="/doctor/appointments/<%=appointment._id%>?_method=DELETE" method = "POST"><button class="btn" id="cancel">Cancel</button></a></td>
+                <td><%=i+1%></td>
+                <td><%=appointment.patient%></td>
+                <td><%=appointment.slot%></td>
+                <td><%=appointment.status%></td>
+                <td><a href="/doctor/appointments/<%=appointment._id%>"><button class="btn" id="cancel">Cancel</button></a></td>
             </tr>
             <%});%>
             <!-- <tr>

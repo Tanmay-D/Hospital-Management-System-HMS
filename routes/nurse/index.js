@@ -6,7 +6,6 @@ var express  = require("express"),
 
 router.get("/", function(req, res) {
     res.render("nurses/nursedash");
-    // res.json({"msg" : "welcome!"})
 });
     
 
@@ -50,7 +49,7 @@ router.get("/login", function(req, res) {
 
 
 // Handle Login Logic
-router.post("/login", passport.authenticate("local", 
+router.post("/login", passport.authenticate("nurseLocal", 
     {
         successRedirect: "/nurse",
         failureRedirect: "/nurse/login"

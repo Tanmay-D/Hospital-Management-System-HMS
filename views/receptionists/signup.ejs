@@ -31,18 +31,18 @@
         <div class="signup-wrap">
             <div class="signup">
                 <h3 id="account">Create an Account</h3>
-                <h3 id="type">(Nurse)</h3>
-                <form action="/nurse/register" method="post">
+                <h3 id="type">(Receptionist)</h3>
+                <form action="/receptionist/register" method="post">
                     <div class="line-wrap">
-                        <input class="short-input" id="firstname" name="fname" type="text" placeholder=" First Name">
-                        <input class="short-input" id="lastname" name="lname" type="text" placeholder=" Last Name">
+                        <input class="short-input" name="fname" id="firstname" type="text" placeholder=" First Name">
+                        <input class="short-input" name="lname" id="lastname" type="text" placeholder=" Last Name">
                     </div>
                     <div class="line-wrap">
-                        <input class="short-input" type="tel" name="mobile" id="tel" placeholder=" Contact No.">
-                        <input class="short-input" id="email" name="username" type="email" placeholder=" Email">
+                        <input class="short-input" name="mobile" type="tel" id="tel" placeholder=" Contact No.">
+                        <input class="short-input" name="username" id="email" type="email" placeholder=" Email">
                     </div>
                     <div class="line-wrap">
-                        <input class="long-input" id="id" name="nurseid" type="number" placeholder=" Nurse ID issued by Hospital">
+                        <input class="long-input" name="nurseid" id="id" type="number" placeholder=" Receptionist ID issued by Hospital">
                     </div>
 
                     <div class="line-wrap">
@@ -50,7 +50,7 @@
                         <input class="short-input" name="cpassword" id="confirmpassword" type="password" placeholder=" Confirm Password">
                     </div>
                     <input type="submit" value="Create Account" id="submitbutton">
-                    <p>Already have an account? <a href="/nurse/login"><span>Log in</span></a></p>
+                    <p>Already have an account? <a href="/receptionist/login"><span>Log in</span></a></p>
                 </form>
             </div>
         </div>

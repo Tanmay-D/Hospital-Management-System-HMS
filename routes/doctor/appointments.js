@@ -15,12 +15,14 @@ router.get("/", function(req, res) {
         else {
             //res.render("doctors/schedule", {doc: foundDoc});
             //res.json(foundDoc);
-
-            Appointment.find({did: foundDoc.doctorid}, function(err, apmnts) {
+                var name = foundDoc.fname + " " + foundDoc.lname;
+                Appointment.find({doctor: name}, function(err, apmnts) {
+                   //res.json(apmnts);
+                    res.render("doctors/schedule", {appointments: apmnts});
+                });
                 
-                res.render("doctors/schedule", {appointments: apmnts, doctor: foundDoc});
                 //res.json(apmnts);
-            });
+            //});
 
         }
     });
@@ -29,14 +31,14 @@ router.get("/", function(req, res) {
 // 3. "/prescriptions" => Not yet decided
 
 // 4. "/appointments/delete" => Delete Appointment 
-router.delete("/:id", function(req, res) {
+router.get("/:id", function(req, res) {
     Appointment.findByIdAndDelete(req.params.id, function(err) {
         if(err) {
             console.log(err);
         }
         else {
-            // res.render("doctors/schedule");
-            res.json({"msg": "Appointment cancelled!"});
+            res.render("doctors/schedule");
+            //res.json({"msg": "Appointment cancelled!"});
         }
     });
 });

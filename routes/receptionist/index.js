@@ -5,15 +5,15 @@ var express  = require("express"),
 
 
 router.get("/", function(req, res) {
-    //res.render("doctors/docdash");
-    res.json({"msg" : "welcome!"})
+    res.render("receptionists/receptionistdash");
+    //res.json({"msg" : "welcome!"})
 });
     
 
 
 // SIGN-UP FORM
 router.get("/register", function(req, res) {
-    //res.render("doctors/signup");
+    res.render("receptionists/signup");
     console.log("signup page.");
     
 });
@@ -24,11 +24,11 @@ router.post("/register", function(req, res) {
 
     var newReceptionist = new Receptionist({
         username: req.body.username,
-        name: req.body.name
-        // fname:  req.body.fname,
-        // lname:  req.body.lname,
-        // contact:  req.body.contact,
-        // doctorid:  req.body.doctorid,
+        //name: req.body.name
+        fname:  req.body.fname,
+        lname:  req.body.lname,
+        contact:  req.body.contact,
+        receptionistid:  req.body.receptionistid,
     });
 
     Receptionist.register(newReceptionist, req.body.password, function(err, admin) {
@@ -44,16 +44,16 @@ router.post("/register", function(req, res) {
 
 //LOGIN FORM
 router.get("/login", function(req, res) {
-    //res.render("receptionists/login");
-    res.json({"msg": "Login Route..."});
+    res.render("receptionists/login");
+    //res.json({"msg": "Login Route..."});
 });
 
 
 // Handle Login Logic
-router.post("/login", passport.authenticate("AppointmentLocal", 
+router.post("/login", passport.authenticate("receptionistLocal", 
     {
-        successRedirect: "/doctor",
-        failureRedirect: "/doctor/login"
+        successRedirect: "/receptionist",
+        failureRedirect: "/receptionist/login"
     }
     ), function(req, res) {
 });

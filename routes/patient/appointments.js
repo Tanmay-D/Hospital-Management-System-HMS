@@ -15,8 +15,8 @@ router.get("/", function(req, res) {
         }
         else {
             console.log(req.user);
-            res.json(foundpatient);
-            // res.render("lists/index", {user: founduser});
+            //res.json(foundpatient);
+            res.render("patients/schedule", {patient: foundpatient});
         }
     });
 });
@@ -34,8 +34,9 @@ router.post("/", function(req, res) {
             var slot = req.body.slot;
             var status = req.body.status;
             var doctor = req.body.doctor;
+            var patient = req.body.patient;
 
-            var newAppointment = {sno: sno, slot: slot, status: status, doctor: doctor};
+            var newAppointment = {sno: sno, slot: slot, status: status, doctor: doctor, patient: patient};
 
             Appointment.create(newAppointment, function(err, appointment) {
                 if(err) {
@@ -48,20 +49,19 @@ router.post("/", function(req, res) {
 
                    console.log(foundpatient);
 
-                    Doctor.findOne({name: doctor}, function(err, foundDoc) {
+                    Doctor.find({doctorid: req.body.did}, function(err, foundDoc) {
                         foundDoc.appointments.push(appointment);
                         foundDoc.save();
 
-                        res.json(foundDoc);
+                        console.log({patient: foundpatient.fname + " " + foundpatient.lname, doctor: foundDoc.fname + " " + foundDoc.lname});
                     });   
 
-                    // res.redirect("/lists");
+                    res.redirect("/patient/appointments/");
                 }
             });
         }
     });
 });
-
 
 // NEW ROUTE
 router.get("/new", function(req, res) {

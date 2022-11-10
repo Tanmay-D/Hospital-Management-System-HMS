@@ -14,9 +14,10 @@ router.get("/", function(req, res) {
 
 // SHOW ALL DOCTORS
 router.get("/doctors", function(req, res) {
-    Doctor.find({}, function(err, docs){
-        res.render("patients/doctorlist", {doctors: docs});
-    });
+    // Doctor.find({}, function(err, docs){
+    //     res.render("patients/doctorlist", {doctors: docs});
+    // });
+    res.render("patients/doctorlist");
 });
 
 
@@ -63,7 +64,7 @@ router.get("/login", function(req, res) {
 // Handle Login Logic
 router.post("/login", passport.authenticate("patientLocal", 
     {
-        successRedirect: "/patient/appointments",
+        successRedirect: "/patient/",
         failureRedirect: "/patient/login"
     }
     ), function(req, res) {

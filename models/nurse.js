@@ -1,4 +1,5 @@
 var mongoose = require("mongoose");
+var passportLocalMongoose = require("passport-local-mongoose");
 
 var nurseSchema = new mongoose.Schema({
     fname: String,
@@ -8,5 +9,7 @@ var nurseSchema = new mongoose.Schema({
     nurseid: String,
     password: String
 });
+
+nurseSchema.plugin(passportLocalMongoose);
 
 module.exports = mongoose.model("Nurse", nurseSchema);
