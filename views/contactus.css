@@ -1,0 +1,93 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* height: 300vh; */
+  /* background-color: #24252A; */
+  background: linear-gradient(
+    74.24deg,
+    #83eaf1 -5.49%,
+    rgba(255, 255, 255, 0.78) 7.13%,
+    #63a4ff 100.52%
+  );
+  background-blend-mode: exclusion;
+
+  font-family: Karla;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 30px;
+  background-color: #b0bcbd;
+  /* box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4); */
+}
+
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+  width: 200px;
+  height: 50px;
+}
+
+.nav_links li,
+a,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  color: #0088a9;
+}
+
+ul {
+  list-style: none;
+}
+
+.ourdetails {
+  display: inline;
+  background-color: #83eaf1;
+  border-radius: 10px;
+}
+
+.ourdetails li {
+  display: inline;
+}
+
+i {
+  color: #000000;
+}
+
+.contactCard {
+  margin: 30px;
+  padding: 10px;
+  width: 300px;
+}
+
+.contactCard:hover {
+  box-shadow: 12px 12px 50px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.ourdetails h1 {
+  padding: 10px;
+  margin-left: 80px;
+}
