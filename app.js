@@ -79,8 +79,8 @@ app.use("/receptionist", receptionistIndexRoutes);
 app.use("/receptionist/appointments", receptionistAppoinmentRoutes);
 
 app.get("/", function(req, res) {
-    // res.render("landing");
-    res.send("Welcome to HMS!");
+    res.render("landing");
+    // res.send("Welcome to HMS!");
 });
 
 
