@@ -56,7 +56,7 @@ router.post("/", function(req, res) {
                         console.log({patient: foundpatient.fname + " " + foundpatient.lname, doctor: foundDoc.fname + " " + foundDoc.lname});
                     });   
 
-                    res.redirect("/patient/appointments/");
+                    res.redirect("/patient/");
                 }
             });
         }

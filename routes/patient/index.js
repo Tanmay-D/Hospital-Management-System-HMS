@@ -14,10 +14,10 @@ router.get("/", function(req, res) {
 
 // SHOW ALL DOCTORS
 router.get("/doctors", function(req, res) {
-    // Doctor.find({}, function(err, docs){
-    //     res.render("patients/doctorlist", {doctors: docs});
-    // });
-    res.render("patients/doctorlist");
+    Doctor.find({}, function(err, docs){
+        res.render("patients/doctorlist", {doctors: docs});
+    });
+    //res.render("patients/doctorlist");
 });
 
 

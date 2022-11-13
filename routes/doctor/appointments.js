@@ -37,7 +37,7 @@ router.get("/:id", function(req, res) {
             console.log(err);
         }
         else {
-            res.render("doctors/schedule");
+            res.redirect("/doctor");
             //res.json({"msg": "Appointment cancelled!"});
         }
     });
