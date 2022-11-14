@@ -26,11 +26,10 @@ router.post("/register", function(req, res) {
         fname:  req.body.fname,
         lname:  req.body.lname,
         contact:  req.body.contact,
-        contactF:  req.body.contactF,
         nurseid:  req.body.nurseid,
     });
 
-    Nurse.register(newNurse, req.body.password, function(err, doc) {
+    Nurse.register(newNurse, req.body.password, function(err, nurse) {
         if(err) {
             console.log(err);
         }
@@ -51,7 +50,7 @@ router.get("/login", function(req, res) {
 // Handle Login Logic
 router.post("/login", passport.authenticate("nurseLocal", 
     {
-        successRedirect: "/nurse",
+        successRedirect: "/nurse/",
         failureRedirect: "/nurse/login"
     }
     ), function(req, res) {

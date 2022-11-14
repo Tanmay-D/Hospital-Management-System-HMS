@@ -8,8 +8,20 @@ middleware  = require("../../middleware");
 
 router.get("/", function(req, res){
     Appointment.find({}, function(err, appmsnts) {
-        res.json(appmsnts);
-        //res.render(filename, {apmnts: appmsnts});
+        //res.json(appmsnts);
+        res.render("receptionists/admin", {appointments: appmsnts});
+    });
+});
+
+
+router.get("/:id", function(req, res) {
+    Appointment.findByIdAndDelete(req.params.id, function(err) {
+        if(err) {
+            console.log(err);
+        }
+        else {
+            res.redirect("/receptionist");
+        }
     });
 });
 

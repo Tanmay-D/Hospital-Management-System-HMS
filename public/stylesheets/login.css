@@ -57,6 +57,7 @@ header{
     flex-direction: row;
     align-items: flex-end;
     justify-content: flex-start;
+    height: 91vh;
 }
 
 img{

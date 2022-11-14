@@ -13,7 +13,6 @@ router.get("/", function(req, res) {
             console.log(err);
         }
         else {
-            //res.render("doctors/schedule", {doc: foundDoc});
             //res.json(foundDoc);
                 var name = foundDoc.fname + " " + foundDoc.lname;
                 Appointment.find({doctor: name}, function(err, apmnts) {
@@ -22,13 +21,10 @@ router.get("/", function(req, res) {
                 });
                 
                 //res.json(apmnts);
-            //});
-
         }
     });
 });
 
-// 3. "/prescriptions" => Not yet decided
 
 // 4. "/appointments/delete" => Delete Appointment 
 router.get("/:id", function(req, res) {
@@ -43,31 +39,5 @@ router.get("/:id", function(req, res) {
     });
 });
 
-// 5. "/appointments/approve" => Update status of appointment
-
-// EDIT ROUTE
-// router.get("/appointments/:id/approve", function(req, res) {
-//     Appointment.findById(req.params.id, function(err, foundAppointment) {
-//         if(err) {
-//             console.log(err);
-//         }
-//         else {
-//             res.render("items/edit", {list_id: req.params.id, foundAppointment});
-//         }
-//     });
-// });
-
-
-// // UPDATE ROUTE
-// router.put("/:item_id", middleware.isLoggedIn, function(req, res) {
-//     Item.findByIdAndUpdate(req.params.item_id, req.body.item, function(err, updatedItem) {
-//         if(err) {
-//             console.log(err);
-//         }
-//         else {
-//             res.redirect("/lists/" + req.params.id);
-//         }
-//     });
-// });
 
 module.exports = router;

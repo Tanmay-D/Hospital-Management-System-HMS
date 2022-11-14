@@ -38,19 +38,19 @@ router.post("/", function(req, res) {
 
             var newAppointment = {sno: sno, slot: slot, status: status, doctor: doctor, patient: patient};
 
-            Appointment.create(newAppointment, function(err, appointment) {
+            Appointment.create(newAppointment, function(err, nappointment) {
                 if(err) {
                     console.log(err);
                 }
                 else { 
-                    appointment.save();
-                    foundpatient.appointments.push(appointment);
+                    nappointment.save();
+                    foundpatient.appointments.push(nappointment);
                     foundpatient.save();
 
                    console.log(foundpatient);
 
                     Doctor.find({doctorid: req.body.did}, function(err, foundDoc) {
-                        foundDoc.appointments.push(appointment);
+                        foundDoc.appointments.push(nappointment);
                         foundDoc.save();
 
                         console.log({patient: foundpatient.fname + " " + foundpatient.lname, doctor: foundDoc.fname + " " + foundDoc.lname});
@@ -67,21 +67,7 @@ router.post("/", function(req, res) {
 router.get("/new", function(req, res) {
     // res.json({"msg": "Schedule a new appointment."});
     res.render("patients/new");
-// res.render("lists/new");
 });
-
-
-// SHOW ROUTE
-// router.get("/:id", function(req, res) {
-// List.findById(req.params.id).populate("items").exec(function(err, foundList) {
-//     if(err) {
-//         console.log(err);
-//     }
-//     else {
-//         res.render("lists/show", {list: foundList});
-//     }
-// });
-// });
 
 
 // DELETE ROUTE
