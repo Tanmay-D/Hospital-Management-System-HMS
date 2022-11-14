@@ -43,15 +43,18 @@ button {
 
 .nav_links {
   list-style: none;
+  
 }
 
 .nav_links li {
   display: inline-block;
   padding: 0px 20px;
+  
 }
 
 .nav_links li a {
   transition: all 0.3s ease 0s;
+  color: #fff;
 }
 
 .nav_links li a:hover {
@@ -62,10 +65,24 @@ ul {
   list-style: none;
 }
 
+.main{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .ourdetails {
-  display: inline;
+  /* display: inline; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
   background-color: #83eaf1;
   border-radius: 10px;
+  color: #000000;
 }
 
 .ourdetails li {
@@ -77,7 +94,7 @@ i {
 }
 
 .contactCard {
-  margin: 30px;
+  margin: 10px;
   padding: 10px;
   width: 300px;
 }
@@ -90,4 +107,13 @@ i {
 .ourdetails h1 {
   padding: 10px;
   margin-left: 80px;
+}
+
+a{
+  color: #000000;
+  font-family: Karla;
+}
+
+a:visited{
+  color: #000000;
 }
