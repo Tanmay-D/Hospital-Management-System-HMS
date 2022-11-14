@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/new.css">
+    <link rel="stylesheet" href="/stylesheets/reports.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +19,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/docicons/favicon-32x32.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+    <title>Report</title>
 </head>
 
 <body>
@@ -24,10 +27,10 @@
         <img class="logo" src="/docimages/LotusHospital.svg" alt="logo" height="100" width="100">
         <nav>
             <ul class="nav_links">
-                <li><a href="/patient/">Home</a></li>
+                <li><a href="/nurse">Home</a></li>
                 <li><a href="/about">About Us</a></li>
                 <li><a href="/contact">Contact Us</a></li>
-                <li><a href="/patient/logout"><i class="fa fa-sign-out"></i></a></li>
+                <li><a href="/nurse/logout"><i class="fa fa-sign-out"></i></a></li>
             </ul>
         </nav>
 
@@ -36,42 +39,32 @@
 
     <div class="main">
         <div class="signup-wrap">
-            <h1 class="my-4" style="text-align: center">Schedule Appointment</h1>
+            <h1 class="my-4" style="text-align: center">Report</h1>
             <div style="width: 30%; margin: 30px auto">
-                <form action="/patient/appointments/" method="post">
+                <form action="#">
 
                     <div class="line-wrap">
-                        <input class="long-input" id="sno" name="sno" type="number" placeholder=" S. No.">
+                        <input class="long-input" id="docname" name="docname" type="text" placeholder="Doctor Name">
                     </div>
 
                     <div class="line-wrap">
-                        <input class="long-input" id="slot" name="slot" type="text" placeholder="Slot">
+                        <input class="long-input" id="did" name="did" type="number" placeholder="Doctor ID">
                     </div>
 
                     <div class="line-wrap">
-                        <input class="long-input" id="status" name="status" type="text" placeholder="Status">
+                        <input class="long-input" id="patientname" name="patientname" type="text" placeholder="Patient Name">
                     </div>
 
                     <div class="line-wrap">
-                        <input class="long-input" id="doctor" name="doctor" type="text" placeholder="Doctor">
-                    </div>
-
-                    <div class="line-wrap">
-                        <input class="long-input" id="did" name="did" type="text" placeholder="Doctor ID">
-                    </div>
-
-                    <div class="line-wrap">
-                        <input class="long-input" id="patient" name="patient" type="text" placeholder="Patient">
+                        <input class="long-input" id="description name="description" type="text-area" placeholder="Description">
                     </div>
 
                     <input type="submit" value="Submit" id="submitbutton">
-                    
+
                 </form>
             </div>
         </div>
     </div>
-
-    
 </body>
 
 </html>

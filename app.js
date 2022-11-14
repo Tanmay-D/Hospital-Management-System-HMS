@@ -12,7 +12,9 @@ var patientIndexRoutes            =  require("./routes/patient/index"),
     patientAppointmentRoutes      =  require("./routes/patient/appointments"),
     doctorAppointmentRoutes       =  require("./routes/doctor/appointments"),
     doctorIndexRoutes             =  require("./routes/doctor/index"),
+    doctorReportRoutes            =  require("./routes/doctor/prescription"),
     nurseIndexRoutes              =  require("./routes/nurse/index"),
+    nurseReportRoutes            =  require("./routes/nurse/report"),
     receptionistIndexRoutes       =  require("./routes/receptionist/index"),
     receptionistAppoinmentRoutes  =  require("./routes/receptionist/appointments");
 
@@ -61,30 +63,30 @@ passport.deserializeUser(function(user, done) {
       done(null,user);
 });
 
-// passport.serializeUser(Doctor.serializeUser());
-// passport.deserializeUser(Doctor.deserializeUser());
-
-// passport.serializeUser(Patient.serializeUser());
-// passport.deserializeUser(Patient.deserializeUser());
-
-
 // SETTING UP ROUTES
 
 app.use("/patient", patientIndexRoutes);
 app.use("/patient/appointments", patientAppointmentRoutes);
 app.use("/doctor/appointments", doctorAppointmentRoutes);
 app.use("/doctor", doctorIndexRoutes);
+appp.use("/doctor/report", doctorReportRoutes);
 app.use("/nurse", nurseIndexRoutes);
+app.use("/nurse/report", nurseReportRoutes);
 app.use("/receptionist", receptionistIndexRoutes);
 app.use("/receptionist/appointments", receptionistAppoinmentRoutes);
 
 app.get("/", function(req, res) {
     res.render("landing");
-    // res.send("Welcome to HMS!");
 });
 
+app.get("/about", function(req, res) {
+    res.render("aboutus");
+});
 
-// 1. "/" => doctor dashboard
+app.get("/contact", function(req, res) {
+    res.render("contactus");
+});
+
 
 app.listen(port, process.env.IP, function() {
     console.log("Hospital Management System server is ready ...");
